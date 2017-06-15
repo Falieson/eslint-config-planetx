@@ -1,0 +1,65 @@
+{
+  "name": "eslint-config-planetx",
+  "version": "0.1.8",
+  "description": "PlanetX eslint config for es8/react",
+  "author": "Florian Mettetal <florianmettetal.developer@gmail.com>",
+  "maintainers": [
+    "Florian Mettetal <florianmettetal.developer@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "airbnb",
+    "javascript",
+    "styleguide",
+    "planetx"
+  ],
+  "homepage": "https://github.com/Falieson/eslint-config-planetx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Falieson/eslint-config-planetx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Falieson/eslint-config-planetx/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "lint:fix": "eslint --fix index.js",
+    "lint": "eslint index.js",
+    "l": "npm run lint:fix",
+    "release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "pre-commit": [
+    "lint:fix"
+  ],
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "3",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-compat": "^1.0.2",
+    "eslint-plugin-flowtype": "^2.32.1",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-lodash": "^2.4.0",
+    "eslint-plugin-mocha": "^4.8.0",
+    "eslint-plugin-react": "^6.10.3"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "semantic-release": "^6.3.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">= 6"
+  }
+}
